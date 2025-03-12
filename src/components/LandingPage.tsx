@@ -25,6 +25,7 @@ export default function LandingPage() {
           alt="Running Background"
           layout="fill"
           className="-z-10 object-cover"
+          unoptimized
         />
 
         {/* Main Content */}
@@ -64,21 +65,25 @@ export default function LandingPage() {
           src={Mobile1}
           alt="Mobile 1"
           className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
+          unoptimized
         />
         <Image
           src={Mobile2}
           alt="Mobile 2"
           className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
+          unoptimized
         />
         <Image
           src={Mobile3}
           alt="Mobile 3"
           className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
+          unoptimized
         />
         <Image
           src={Mobile4}
           alt="Mobile 4"
           className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
+          unoptimized
         />
       </div>
       <div ref={bottomRef} className="relative min-h-screen bg-[#1e1e1e] text-white text-center px-4">
