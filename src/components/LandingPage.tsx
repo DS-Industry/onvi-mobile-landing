@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import RunningImage from "@images/OnviLandingBg.jpg";
-import Mobile1 from "@images/Mobile1.jpg";
-import Mobile2 from "@images/Mobile2.jpg";
-import Mobile3 from "@images/Mobile3.jpg";
-import Mobile4 from "@images/Mobile4.jpg";
+import RunningImage from "../../public/images/OnviLandingBg.jpg";
+import Mobile1 from "../../public/images/Mobile1.jpg";
+import Mobile2 from "../../public/images/Mobile2.jpg";
+import Mobile3 from "../../public/images/Mobile3.jpg";
+import Mobile4 from "../../public/images/Mobile4.jpg";
 import { useRef } from "react";
 
 export default function LandingPage() {
