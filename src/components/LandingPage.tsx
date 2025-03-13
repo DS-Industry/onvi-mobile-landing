@@ -1,11 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import RunningImage from "../../public/images/OnviLandingBg.jpg";
-import Mobile1 from "../../public/images/Mobile1.jpg";
-import Mobile2 from "../../public/images/Mobile2.jpg";
-import Mobile3 from "../../public/images/Mobile3.jpg";
-import Mobile4 from "../../public/images/Mobile4.jpg";
+import RunningImage from "@images/OnviLandingBg.jpg";
+import Mobile1 from "@images/Mobile1.jpg";
+import Mobile2 from "@images/Mobile2.jpg";
+import Mobile3 from "@images/Mobile3.jpg";
+import Mobile4 from "@images/Mobile4.jpg";
+import AppleLogo from "@images/AppStoreLogo.jpg";
+import GooglePlayLogo from "@images/GooglePlayStoreLogo.jpg";
+import OnviLogo from "@images/OnviLogo.jpg";
+import TelegramLogo from "@images/telegramLogo.jpg";
 import { useRef } from "react";
 
 export default function LandingPage() {
@@ -27,7 +31,11 @@ export default function LandingPage() {
           className="-z-10 object-cover"
           unoptimized
         />
-
+        <Image
+          src={OnviLogo}
+          alt="Onvi Logo"
+          className="absolute top-10 left-10 w-20 h-20 rounded-lg"
+        />
         {/* Main Content */}
         <div className="max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-10 px-4 sm:px-6 md:px-10">
           {/* Left Section */}
@@ -60,55 +68,56 @@ export default function LandingPage() {
       </div>
 
       {/* Mobile App Screenshots */}
-      <div className="flex flex-nowrap justify-center gap-4 sm:gap-6 px-4 sm:px-6 md:px-10 overflow-hidden mb-10">
+      <div className="flex flex-nowrap gap-4 sm:gap-6 px-4 sm:px-6 md:px-10 mb-10">
         <Image
           src={Mobile1}
           alt="Mobile 1"
-          className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
-          unoptimized
+          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
         <Image
           src={Mobile2}
           alt="Mobile 2"
-          className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
-          unoptimized
+          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
         <Image
           src={Mobile3}
           alt="Mobile 3"
-          className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
-          unoptimized
+          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
         <Image
           src={Mobile4}
           alt="Mobile 4"
-          className="h-64 w-[40%] sm:h-72 sm:w-[22%] md:h-80 md:w-[18%] lg:h-96 lg:w-[15%] transition-all duration-300"
-          unoptimized
+          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
       </div>
-      <div ref={bottomRef} className="relative min-h-screen bg-[#1e1e1e] text-white text-center px-4">
-        <div className="flex flex-col items-center mb-20">
+
+      <div ref={bottomRef} className="relative bg-[#1e1e1e] text-white text-center px-4">
+        <div className="flex flex-col items-center">
           <h1 className="text-3xl font-semibold mt-40 mb-4">ONVI: ваш надёжный помощник в уходе за авто</h1>
           <p className="text-sm mb-4 text-[#afafaf]">Приложение Onvi доступно бесплатно в App Store и Google Play.</p>
 
           <div className="flex gap-4 mb-8">
-            <a href="#" className="flex items-center">
-              <Image src={Mobile1} alt="Download on the App Store" className="h-12 w-12" />
-            </a>
-            <a href="#" className="flex items-center">
-              <Image src={Mobile2} alt="Get it on Google Play" className="h-12 w-12" />
-            </a>
+            <button className="flex items-center">
+              <Image src={AppleLogo} alt="Download on the App Store" className="h-12 w-48" />
+            </button>
+            <button className="flex items-center">
+              <Image src={GooglePlayLogo} alt="Get it on Google Play" className="h-12 w-48" />
+            </button>
           </div>
-
-          <h2 className="text-4xl font-semibold mb-2">Наши контакты:</h2>
-          <p className="text-2xl">Телефон поддержки: +7(800)250-20-19</p>
+          <h2 className="text-4xl font-semibold mt-32 mb-2">Наши контакты:</h2>
+          <p className="text-2xl mt-10">Телефон поддержки: +7(800)250-20-19</p>
           <p className="text-2xl mb-4">Почта поддержки: support@onvione.ru</p>
-          <a href="https://docs.google.com/document/d/1H5DFxDJfFBxK6wNK3iIydC9Qp1zaQsuSxZkjaPcCVyc/edit?tab=t.0" target="_blank" rel="noreferrer noopener" className="text-[#ff8652]">
+          <a href="https://docs.google.com/document/d/1H5DFxDJfFBxK6wNK3iIydC9Qp1zaQsuSxZkjaPcCVyc/edit?tab=t.0" target="_blank" rel="noreferrer noopener" className="text-[#ff8652] mt-10">
             Политика конфиденциальности
           </a>
+          <Image src={TelegramLogo} alt="Telegram Logo" className="w-16 h-16 mt-10" />
         </div>
+      </div>
+      <div className="bg-[#1e1e1e] text-white pt-10">
         <hr className="bg-white" />
-        <div className="text-xs ml-10 mt-10 text-start font-semibold">© &quot;Onvione&quot; 2024 Все права защищены.</div>
+        <div className="h-20 flex items-center">
+          <div className="text-xs ml-10 text-start font-semibold">© &quot;Onvione&quot; 2024 Все права защищены.</div>
+        </div>
       </div>
     </div>
   );
