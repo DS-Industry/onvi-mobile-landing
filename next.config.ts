@@ -1,12 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig: import('next').NextConfig = {
   output: "export",
-  images: {
-    unoptimized: true, // Required for static exports
-  },
-  basePath: "/onvi-mobile-landing",
-  assetPrefix: "/onvi-mobile-landing/",
+  basePath: "/onvi-landing-page", // Change this to your repo name
+  assetPrefix: "/onvi-landing-page/",
 };
 
-export default nextConfig;
+module.exports = nextConfig;
