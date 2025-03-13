@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Required for static exports
   },
   basePath: "/onvi-mobile-landing",
-  assetPrefix: "/onvi-mobile-landing",
+  assetPrefix: "/onvi-mobile-landing/",
 };
 
 export default nextConfig;
