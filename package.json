@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export",
-    "predeploy": "next build && next export",
+    "build": "next build",
+    "predeploy": "next build",
     "deploy": "gh-pages -d out",
     "lint": "next lint"
   },
