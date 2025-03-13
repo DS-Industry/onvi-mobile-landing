@@ -1,11 +1,11 @@
-/** @type {import('next').NextConfig} */
 const nextConfig: import('next').NextConfig = {
   output: "export",
-  basePath: "/onvi-mobile-landing", // Change this to your GitHub repo name
+  basePath: "/onvi-mobile-landing",
   assetPrefix: "/onvi-mobile-landing/",
+  trailingSlash: true, // Important for static exports!
   images: {
     unoptimized: true, // Required for static export
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

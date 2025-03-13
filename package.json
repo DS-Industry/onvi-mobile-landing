@@ -2,7 +2,7 @@
   "name": "onvi-mobile-landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/DS-Industry/onvi-mobile-landing/",
+  "homepage": "https://DS-Industry.github.io/onvi-mobile-landing/",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
