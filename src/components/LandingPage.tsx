@@ -1,16 +1,9 @@
 "use client";
 
 import Image from "next/image";
-// import RunningImage from "@images/OnviLandingBg.jpg";
-// import Mobile1 from "@images/Mobile1.jpg";
-// import Mobile2 from "@images/Mobile2.jpg";
-// import Mobile3 from "@images/Mobile3.jpg";
-// import Mobile4 from "@images/Mobile4.jpg";
-// import AppleLogo from "@images/AppStoreLogo.jpg";
-// import GooglePlayLogo from "@images/GooglePlayStoreLogo.jpg";
-// import OnviLogo from "@images/OnviLogo.jpg";
-// import TelegramLogo from "@images/telegramLogo.jpg";
 import { useRef } from "react";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function LandingPage() {
   const bottomRef = useRef<HTMLDivElement | null>(null);
@@ -25,14 +18,14 @@ export default function LandingPage() {
       <div className="relative min-h-screen flex items-center justify-center">
         {/* Background Elements */}
         <Image
-          src={"/onvi-mobile-landing/images/OnviLandingBg.jpg"}
+          src={`${basePath}/images/OnviLandingBg.jpg`}
           alt="Running Background"
-          layout="fill"
+          fill
           className="-z-10 object-cover"
           unoptimized
         />
         <Image
-          src={"/onvi-mobile-landing/images/OnviLogo.jpg"}
+          src={`${basePath}/images/OnviLogo.jpg`}
           alt="Onvi Logo"
           width={20}
           height={20}
@@ -54,15 +47,9 @@ export default function LandingPage() {
               Скачать приложение
             </button>
           </div>
-
-          {/* Right Section */}
-          <div className="md:w-1/2 relative">
-            <div className="absolute w-40 sm:w-60 h-1 bg-secondary top-20 left-10 rotate-45"></div>
-          </div>
         </div>
       </div>
 
-      {/* Centered Text Section */}
       <div className="flex flex-col items-center justify-center h-auto md:h-[400px] mx-auto space-y-2 w-full max-w-[580px] text-center px-4 sm:px-0">
         <div className="font-medium text-4xl sm:text-5xl">Onvi — мойка с выгодой</div>
         <div className="text-lg max-w-full sm:max-w-[580px]">
@@ -72,54 +59,36 @@ export default function LandingPage() {
 
       {/* Mobile App Screenshots */}
       <div className="flex flex-nowrap gap-4 sm:gap-6 px-4 sm:px-6 md:px-10 mb-10">
-        <Image
-          src={"/onvi-mobile-landing/images/Mobile1.jpg"}
-          alt="Mobile 1"
-          width={20}
-          height={20}
-          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
-          unoptimized
-        />
-        <Image
-          src={"/onvi-mobile-landing/images/Mobile2.jpg"}
-          alt="Mobile 2"
-          width={20}
-          height={20}
-          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
-          unoptimized
-        />
-        <Image
-          src={"/onvi-mobile-landing/images/Mobile3.jpg"}
-          alt="Mobile 3"
-          width={20}
-          height={20}
-          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
-          unoptimized
-        />
-        <Image
-          src={"/onvi-mobile-landing/images/Mobile4.jpg"}
-          alt="Mobile 4"
-          width={20}
-          height={20}
-          className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
-          unoptimized
-        />
+        {[1, 2, 3, 4].map((num) => (
+          <Image
+            key={num}
+            src={`${basePath}/images/Mobile${num}.jpg`}
+            alt={`Mobile ${num}`}
+            width={20}
+            height={20}
+            className="h-[500px] w-[80px] sm:w-[150px] md:w-[150px] lg:w-[400px]"
+            unoptimized
+          />
+        ))}
       </div>
 
       <div ref={bottomRef} className="relative bg-[#1e1e1e] text-white text-center px-4">
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-semibold mt-40 mb-4">ONVI: ваш надёжный помощник в уходе за авто</h1>
           <p className="text-sm mb-4 text-[#afafaf]">Приложение Onvi доступно бесплатно в App Store и Google Play.</p>
-
           <div className="flex gap-4 mb-8">
-            <button className="flex items-center">
-              <Image src={"/onvi-mobile-landing/images/AppStoreLogo.jpg"} alt="Download on the App Store" width={20}
-          height={20} className="h-12 w-48" unoptimized />
-            </button>
-            <button className="flex items-center">
-              <Image src={"/onvi-mobile-landing/images/GooglePlayStoreLogo.jpg"} alt="Get it on Google Play" width={20}
-          height={20} className="h-12 w-48" unoptimized />
-            </button>
+            {["AppStoreLogo", "GooglePlayStoreLogo"].map((logo) => (
+              <button key={logo} className="flex items-center">
+                <Image
+                  src={`${basePath}/images/${logo}.jpg`}
+                  alt={logo}
+                  width={20}
+                  height={20}
+                  className="h-12 w-48"
+                  unoptimized
+                />
+              </button>
+            ))}
           </div>
           <h2 className="text-4xl font-semibold mt-32 mb-2">Наши контакты:</h2>
           <p className="text-2xl mt-10">Телефон поддержки: +7(800)250-20-19</p>
@@ -127,10 +96,10 @@ export default function LandingPage() {
           <a href="https://docs.google.com/document/d/1H5DFxDJfFBxK6wNK3iIydC9Qp1zaQsuSxZkjaPcCVyc/edit?tab=t.0" target="_blank" rel="noreferrer noopener" className="text-[#ff8652] mt-10">
             Политика конфиденциальности
           </a>
-          <Image src={"/onvi-mobile-landing/images/telegramLogo.jpg"} alt="Telegram Logo" width={20}
-          height={20} className="w-16 h-16 mt-10" unoptimized />
+          <Image src={`${basePath}/images/telegramLogo.jpg`} alt="Telegram Logo" width={20} height={20} className="w-16 h-16 mt-10" unoptimized />
         </div>
       </div>
+
       <div className="bg-[#1e1e1e] text-white pt-10">
         <hr className="bg-white" />
         <div className="h-20 flex items-center">
