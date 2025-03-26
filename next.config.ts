@@ -7,6 +7,15 @@ const nextConfig: import('next').NextConfig = {
     assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '', // Prefix for assets
     trailingSlash: true, // Recommended for static deployments
 
+    async rewrites() {
+        return [
+            {
+                source: '/.well-known/:path*',
+                destination: '/.well-known/:path*',
+            },
+        ];
+    },
+
     async headers() {
         return [
             {
@@ -26,19 +35,6 @@ const nextConfig: import('next').NextConfig = {
             }
         ];
     },
-    async rewrites() {
-        return [
-            {
-                source: '/.well-known/apple-app-site-association',
-                destination: '/.well-known/apple-app-site-association',
-            },
-            {
-                source: '/.well-known/assetlinks.json',
-                destination: '/.well-known/assetlinks.json',
-            },
-        ];
-    },
-
 };
 
 export default nextConfig;
