@@ -6,6 +6,18 @@ const nextConfig: import('next').NextConfig = {
     basePath: process.env.NEXT_PUBLIC_BASE_PATH || '', // Use the base path if provided
     assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '', // Prefix for assets
     trailingSlash: true, // Recommended for static deployments
+
+    // Ensure the apple-app-site-association file is properly served
+    async headers() {
+        return [
+            {
+                source: '/.well-known/apple-app-site-association',
+                headers: [
+                    { key: 'Content-Type', value: 'application/json' }
+                ],
+            }
+        ];
+    }
 };
 
 export default nextConfig;
