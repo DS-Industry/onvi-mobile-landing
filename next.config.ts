@@ -15,9 +15,16 @@ const nextConfig: import('next').NextConfig = {
                 headers: [
                     { key: 'Content-Type', value: 'application/json' }
                 ],
+            },
+            {
+                source: '/.well-known/assetlinks.json',
+                headers: [
+                    { key: 'Content-Type', value: 'application/json' }
+                ],
             }
         ];
-    }
+    },
+
 };
 
 export default nextConfig;

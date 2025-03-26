@@ -1,0 +1,6 @@
+# Ensure .well-known files are served correctly
+/.well-known/apple-app-site-association /.well-known/apple-app-site-association 200
+/.well-known/assetlinks.json /.well-known/assetlinks.json 200
+
+# Handle all other routes with the SPA
+/* /index.html 200
