@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ONVI - Автомойки по пути",
   description: "Удобное приложение для поиска моек самообслуживания рядом с вами. Оплата услуг, кешбэк и более 80 партнёров в 10 регионах России.",
-  metadataBase: new URL('https://ds-industry.github.io/onvi-mobile-landing'),
+  metadataBase: new URL('https://onvione.ru'),
   keywords: ['онви', 'автомойка', 'онлайн оплата', 'кешбэк', 'мобильное приложение'],
   authors: [{ name: 'Onvione', url: 'https://onvione.ru' }],
   openGraph: {
     title: 'ONVI - Автомойки по пути',
     description: 'Удобное приложение для поиска моек самообслуживания рядом с вами',
-    url: 'https://ds-industry.github.io/onvi-mobile-landing',
+    url: 'https://onvione.ru',
     siteName: 'ONVI',
     locale: 'ru_RU',
     type: 'website',
