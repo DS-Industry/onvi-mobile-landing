@@ -3,7 +3,8 @@ const nextConfig: import('next').NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  basePath: process.env.NODE_ENV === "production" ? '/onvi-mobile-landing' : "",
+  basePath: "/onvi-mobile-landing", // Your repo name (case-sensitive!)
+  assetPrefix: "/onvi-mobile-landing/",  
   output: 'export'
 };
 
