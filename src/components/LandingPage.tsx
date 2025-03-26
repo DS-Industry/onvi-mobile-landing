@@ -37,6 +37,7 @@ export default function LandingPage() {
           width={20}
           height={20}
           className="absolute top-10 left-10 w-20 h-20 rounded-lg"
+          unoptimized
         />
         {/* Main Content */}
         <div className="max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-10 px-4 sm:px-6 md:px-10">
@@ -77,6 +78,7 @@ export default function LandingPage() {
           width={20}
           height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
+          unoptimized
         />
         <Image
           src={"/onvi-mobile-landing/images/Mobile2.jpg"}
@@ -84,6 +86,7 @@ export default function LandingPage() {
           width={20}
           height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
+          unoptimized
         />
         <Image
           src={"/onvi-mobile-landing/images/Mobile3.jpg"}
@@ -91,6 +94,7 @@ export default function LandingPage() {
           width={20}
           height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
+          unoptimized
         />
         <Image
           src={"/onvi-mobile-landing/images/Mobile4.jpg"}
@@ -98,6 +102,7 @@ export default function LandingPage() {
           width={20}
           height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
+          unoptimized
         />
       </div>
 
@@ -109,11 +114,11 @@ export default function LandingPage() {
           <div className="flex gap-4 mb-8">
             <button className="flex items-center">
               <Image src={"/onvi-mobile-landing/images/AppStoreLogo.jpg"} alt="Download on the App Store" width={20}
-          height={20} className="h-12 w-48" />
+          height={20} className="h-12 w-48" unoptimized />
             </button>
             <button className="flex items-center">
               <Image src={"/onvi-mobile-landing/images/GooglePlayStoreLogo.jpg"} alt="Get it on Google Play" width={20}
-          height={20} className="h-12 w-48" />
+          height={20} className="h-12 w-48" unoptimized />
             </button>
           </div>
           <h2 className="text-4xl font-semibold mt-32 mb-2">Наши контакты:</h2>
@@ -123,7 +128,7 @@ export default function LandingPage() {
             Политика конфиденциальности
           </a>
           <Image src={"/onvi-mobile-landing/images/telegramLogo.jpg"} alt="Telegram Logo" width={20}
-          height={20} className="w-16 h-16 mt-10" />
+          height={20} className="w-16 h-16 mt-10" unoptimized />
         </div>
       </div>
       <div className="bg-[#1e1e1e] text-white pt-10">
