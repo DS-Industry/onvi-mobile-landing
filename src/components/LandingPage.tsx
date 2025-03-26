@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 // import RunningImage from "@images/OnviLandingBg.jpg";
-import Mobile1 from "@images/Mobile1.jpg";
-import Mobile2 from "@images/Mobile2.jpg";
-import Mobile3 from "@images/Mobile3.jpg";
-import Mobile4 from "@images/Mobile4.jpg";
-import AppleLogo from "@images/AppStoreLogo.jpg";
-import GooglePlayLogo from "@images/GooglePlayStoreLogo.jpg";
-import OnviLogo from "@images/OnviLogo.jpg";
-import TelegramLogo from "@images/telegramLogo.jpg";
+// import Mobile1 from "@images/Mobile1.jpg";
+// import Mobile2 from "@images/Mobile2.jpg";
+// import Mobile3 from "@images/Mobile3.jpg";
+// import Mobile4 from "@images/Mobile4.jpg";
+// import AppleLogo from "@images/AppStoreLogo.jpg";
+// import GooglePlayLogo from "@images/GooglePlayStoreLogo.jpg";
+// import OnviLogo from "@images/OnviLogo.jpg";
+// import TelegramLogo from "@images/telegramLogo.jpg";
 import { useRef } from "react";
 
 export default function LandingPage() {
@@ -32,8 +32,10 @@ export default function LandingPage() {
           unoptimized
         />
         <Image
-          src={OnviLogo}
+          src={"/onvi-mobile-landing/images/OnviLogo.jpg"}
           alt="Onvi Logo"
+          width={20}
+          height={20}
           className="absolute top-10 left-10 w-20 h-20 rounded-lg"
         />
         {/* Main Content */}
@@ -70,23 +72,31 @@ export default function LandingPage() {
       {/* Mobile App Screenshots */}
       <div className="flex flex-nowrap gap-4 sm:gap-6 px-4 sm:px-6 md:px-10 mb-10">
         <Image
-          src={Mobile1}
+          src={"/onvi-mobile-landing/images/Mobile1.jpg"}
           alt="Mobile 1"
+          width={20}
+          height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
         <Image
-          src={Mobile2}
+          src={"/onvi-mobile-landing/images/Mobile2.jpg"}
           alt="Mobile 2"
+          width={20}
+          height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
         <Image
-          src={Mobile3}
+          src={"/onvi-mobile-landing/images/Mobile3.jpg"}
           alt="Mobile 3"
+          width={20}
+          height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
         <Image
-          src={Mobile4}
+          src={"/onvi-mobile-landing/images/Mobile4.jpg"}
           alt="Mobile 4"
+          width={20}
+          height={20}
           className="h-[500px] w-[80px] sm:w-[150x] md:w-[150px] lg:w-[400px]"
         />
       </div>
@@ -98,10 +108,12 @@ export default function LandingPage() {
 
           <div className="flex gap-4 mb-8">
             <button className="flex items-center">
-              <Image src={AppleLogo} alt="Download on the App Store" className="h-12 w-48" />
+              <Image src={"/onvi-mobile-landing/images/AppStoreLogo.jpg"} alt="Download on the App Store" width={20}
+          height={20} className="h-12 w-48" />
             </button>
             <button className="flex items-center">
-              <Image src={GooglePlayLogo} alt="Get it on Google Play" className="h-12 w-48" />
+              <Image src={"/onvi-mobile-landing/images/GooglePlayStoreLogo.jpg"} alt="Get it on Google Play" width={20}
+          height={20} className="h-12 w-48" />
             </button>
           </div>
           <h2 className="text-4xl font-semibold mt-32 mb-2">Наши контакты:</h2>
@@ -110,7 +122,8 @@ export default function LandingPage() {
           <a href="https://docs.google.com/document/d/1H5DFxDJfFBxK6wNK3iIydC9Qp1zaQsuSxZkjaPcCVyc/edit?tab=t.0" target="_blank" rel="noreferrer noopener" className="text-[#ff8652] mt-10">
             Политика конфиденциальности
           </a>
-          <Image src={TelegramLogo} alt="Telegram Logo" className="w-16 h-16 mt-10" />
+          <Image src={"/onvi-mobile-landing/images/telegramLogo.jpg"} alt="Telegram Logo" width={20}
+          height={20} className="w-16 h-16 mt-10" />
         </div>
       </div>
       <div className="bg-[#1e1e1e] text-white pt-10">
