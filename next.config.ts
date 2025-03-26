@@ -1,5 +1,5 @@
 const nextConfig: import('next').NextConfig = {
-    output: 'export', // This enables static HTML export
+    output: 'standalone', // This enables static HTML export
     images: {
         unoptimized: true, // Required for static export with images
     },
@@ -7,13 +7,15 @@ const nextConfig: import('next').NextConfig = {
     assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '', // Prefix for assets
     trailingSlash: true, // Recommended for static deployments
 
-    // Ensure the apple-app-site-association file is properly served
     async headers() {
         return [
             {
                 source: '/.well-known/apple-app-site-association',
                 headers: [
-                    { key: 'Content-Type', value: 'application/json' }
+                    {
+                        key: 'Content-Type',
+                        value: 'application/json',
+                    },
                 ],
             },
             {
@@ -22,6 +24,18 @@ const nextConfig: import('next').NextConfig = {
                     { key: 'Content-Type', value: 'application/json' }
                 ],
             }
+        ];
+    },
+    async rewrites() {
+        return [
+            {
+                source: '/.well-known/apple-app-site-association',
+                destination: '/.well-known/apple-app-site-association',
+            },
+            {
+                source: '/.well-known/assetlinks.json',
+                destination: '/.well-known/assetlinks.json',
+            },
         ];
     },
 
