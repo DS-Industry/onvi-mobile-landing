@@ -1,7 +1,6 @@
 // src/components/layout/Header.tsx
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

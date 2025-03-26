@@ -4,7 +4,6 @@ import Link from 'next/link';
 import LogoIMG from 'public/images/LogoIMG.jpg';
 import Telegram from 'public/images/Telegram.png';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Footer() {
     return (
@@ -72,7 +71,7 @@ export default function Footer() {
 
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <p className="text-sm text-gray-400">
-                        © "Onvione" 2024 Все права защищены.
+                        © &quot;Onvione&quot; 2024 Все права защищены.
                     </p>
                 </div>
             </div>

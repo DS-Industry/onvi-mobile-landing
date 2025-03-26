@@ -4,9 +4,8 @@ import AppScreen2 from 'public/images/AppScreen2.jpg'
 import AppScreen3 from 'public/images/AppScreen3.jpg'
 import AppScreen4 from 'public/images/AppScreen4.jpg'
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-const IMG_SET: any = {
+const IMG_SET: Record<string, typeof AppScreen1> = {
     'AppScreen1': AppScreen1,
     'AppScreen2': AppScreen2,
     'AppScreen3': AppScreen3,

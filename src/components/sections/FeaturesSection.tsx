@@ -1,9 +1,7 @@
 import FeatureCard from '../ui/FeatureCard';
 import { forwardRef } from 'react';
 
-interface FeaturesSectionProps {
-    // No props needed for this component
-}
+type FeaturesSectionProps = object;
 
 const FeaturesSection = forwardRef<HTMLDivElement, FeaturesSectionProps>((props, ref) => {
     const features = [

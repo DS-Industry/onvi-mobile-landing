@@ -1,9 +1,7 @@
 import AppStoreButton from '../ui/AppStoreButton';
 import { forwardRef } from 'react';
 
-interface DownloadSectionProps {
-    // No props needed for this component
-}
+type DownloadSectionProps = object;
 
 const DownloadSection = forwardRef<HTMLDivElement, DownloadSectionProps>((props, ref) => {
     return (

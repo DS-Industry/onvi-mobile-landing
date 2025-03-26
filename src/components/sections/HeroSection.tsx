@@ -2,10 +2,8 @@
 import Image from 'next/image';
 import Button from '../ui/Button';
 import BackgroundIMG from 'public/images/BackgroundIMG.png';
-import DeviceMockUpLeft from 'public/images/DeviceMockUpLeft.png';
 import DeviceMockUpPortrait from 'public/images/DeviceMockUpPortrait.png';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 interface HeroSectionProps {
     scrollToFeatures: () => void;
