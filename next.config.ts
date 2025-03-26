@@ -1,8 +1,11 @@
 const nextConfig: import('next').NextConfig = {
-  output: "export",
+  reactStrictMode: true,
   images: {
-    unoptimized: true,
+    unoptimized: true, // Disable default image optimization
   },
+  assetPrefix: '/onvi-mobile-landing/',
+  basePath: '/onvi-mobile-landing',
+  output: 'export'
 };
 
 export default nextConfig;
