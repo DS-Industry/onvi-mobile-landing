@@ -25,14 +25,14 @@ export default function LandingPage() {
       <div className="relative min-h-screen flex items-center justify-center">
         {/* Background Elements */}
         <Image
-          src={`onvi-mobile-landing/images/OnviLandingBg.jpg`}
+          src={`/onvi-mobile-landing/images/OnviLandingBg.jpg`}
           alt="Running Background"
           fill
           className="-z-10 object-cover"
           unoptimized
         />
         <Image
-          src={`onvi-mobile-landing/images/OnviLogo.jpg`}
+          src={`/onvi-mobile-landing/images/OnviLogo.jpg`}
           alt="Onvi Logo"
           width={20}
           height={20}
@@ -69,7 +69,7 @@ export default function LandingPage() {
         {[1, 2, 3, 4].map((num) => (
           <Image
             key={num}
-            src={`onvi-mobile-landing/images/Mobile${num}.jpg`}
+            src={`/onvi-mobile-landing/images/Mobile${num}.jpg`}
             alt={`Mobile ${num}`}
             width={20}
             height={20}
@@ -87,7 +87,7 @@ export default function LandingPage() {
             {["AppStoreLogo", "GooglePlayStoreLogo"].map((logo) => (
               <button key={logo} className="flex items-center">
                 <Image
-                  src={`onvi-mobile-landing/images/${logo}.jpg`}
+                  src={`/onvi-mobile-landing/images/${logo}.jpg`}
                   alt={logo}
                   width={20}
                   height={20}
@@ -103,7 +103,7 @@ export default function LandingPage() {
           <a href="https://docs.google.com/document/d/1H5DFxDJfFBxK6wNK3iIydC9Qp1zaQsuSxZkjaPcCVyc/edit?tab=t.0" target="_blank" rel="noreferrer noopener" className="text-[#ff8652] mt-10">
             Политика конфиденциальности
           </a>
-          <Image src={`onvi-mobile-landing/images/telegramLogo.jpg`} alt="Telegram Logo" width={20} height={20} className="w-16 h-16 mt-10" unoptimized />
+          <Image src={`/onvi-mobile-landing/images/telegramLogo.jpg`} alt="Telegram Logo" width={20} height={20} className="w-16 h-16 mt-10" unoptimized />
         </div>
       </div>
 
