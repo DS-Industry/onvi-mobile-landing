@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import RunningImage from "@images/OnviLandingBg.jpg";
+// import RunningImage from "@images/OnviLandingBg.jpg";
 import Mobile1 from "@images/Mobile1.jpg";
 import Mobile2 from "@images/Mobile2.jpg";
 import Mobile3 from "@images/Mobile3.jpg";
@@ -25,7 +25,7 @@ export default function LandingPage() {
       <div className="relative min-h-screen flex items-center justify-center">
         {/* Background Elements */}
         <Image
-          src={RunningImage}
+          src={"/onvi-mobile-landing/images/OnviLandingBg.jpg"}
           alt="Running Background"
           layout="fill"
           className="-z-10 object-cover"
