@@ -78,7 +78,7 @@ export default function AppBanner() {
 
                     // If less than 2 seconds passed, assume app not opened
                     if (timeElapsed < 2000 && !document.hidden) {
-                        window.location.href = 'https://play.google.com/store/apps/details?id=com.onvimobile.staging';
+                        window.location.href = 'https://play.google.com/store/apps/details?id=com.onvimobile';
                     }
                 }, 1500);
             });

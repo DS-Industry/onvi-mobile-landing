@@ -19,11 +19,11 @@ const DownloadSection = forwardRef<HTMLDivElement, DownloadSectionProps>((props,
                         href="https://apps.apple.com/ru/app/onvi/id6504496655"
                         className="w-full sm:w-auto"
                     />
-                    
+
                     {/* Google Play Button */}
                     <AppStoreButton
                         type="googleplay"
-                        href="https://play.google.com/store/apps/details?id=ru.gals.onvi"
+                        href="https://play.google.com/store/apps/details?id=com.onvimobile"
                         className="w-full sm:w-auto"
                     />
                 </div>
