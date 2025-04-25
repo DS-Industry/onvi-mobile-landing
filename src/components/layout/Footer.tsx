@@ -56,14 +56,25 @@ export default function Footer() {
                     {/* Column 3 - Legal */}
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Информация</h3>
-                        <Link
-                            href="https://docs.google.com/document/d/1H5DFxDJfFBxK6wNK3iIydC9Qp1zaQsuSxZkjaPcCVyc/edit?tab=t.0"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            className="text-orange-500 hover:text-orange-400 transition"
-                        >
-                            Политика конфиденциальности
-                        </Link>
+                        <div className="flex flex-col">
+                            <Link
+                                href="https://docs.google.com/document/d/1H5DFxDJfFBxK6wNK3iIydC9Qp1zaQsuSxZkjaPcCVyc/edit?tab=t.0"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                className="text-orange-500 hover:text-orange-400 transition"
+                            >
+                                Политика конфиденциальности
+                            </Link>
+                            <Link
+                                href="https://docs.google.com/document/d/1z9LIxI5UDnK9kuGBf5ZqvUPaophCr4JfVDNayFz1zLs/edit?usp=sharing"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                className="text-orange-500 hover:text-orange-400 transition"
+                            >
+                                Удаление данных
+                            </Link>
+                        </div>
+
                     </div>
                 </div>
 
